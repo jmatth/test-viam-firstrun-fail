@@ -15,5 +15,5 @@ log_error() {
 }
 
 
-log_info "SUCCESS"
-exit 0
+log_error "FAILURE"
+exit 1
