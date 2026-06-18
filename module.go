@@ -2,16 +2,13 @@ package testfirstrunfail
 
 import (
 	"context"
-	commonpb "go.viam.com/api/common/v1"
-	genericpb "go.viam.com/api/component/generic/v1"
+	"errors"
+	"fmt"
+
 	generic "go.viam.com/rdk/components/generic"
 	"go.viam.com/rdk/logging"
-	rprotoutils "go.viam.com/rdk/protoutils"
-	"go.viam.com/rdk/referenceframe"
 	"go.viam.com/rdk/resource"
 	"go.viam.com/rdk/spatialmath"
-	"go.viam.com/utils/protoutils"
-	"go.viam.com/utils/rpc"
 )
 
 var (
@@ -79,11 +76,9 @@ func newTestFirstrunFailTestFirstrunFail(ctx context.Context, deps resource.Depe
 	}
 
 	return NewTestFirstrunFail(ctx, deps, rawConf.ResourceName(), conf, logger)
-
 }
 
 func NewTestFirstrunFail(ctx context.Context, deps resource.Dependencies, name resource.Name, conf *Config, logger logging.Logger) (resource.Resource, error) {
-
 	cancelCtx, cancelFunc := context.WithCancel(context.Background())
 
 	s := &testFirstrunFailTestFirstrunFail{
