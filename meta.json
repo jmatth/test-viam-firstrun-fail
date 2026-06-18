@@ -2,7 +2,7 @@
   "$schema": "https://dl.viam.dev/module.schema.json",
   "module_id": "jmatthviam:test-firstrun-fail",
   "visibility": "public_unlisted",
-  "url": "",
+  "url": "https://github.com/jmatth/test-viam-firstrun-fail",
   "description": "Modular generic component: test_firstrun_fail",
   "applications": null,
   "markdown_link": "README.md",
